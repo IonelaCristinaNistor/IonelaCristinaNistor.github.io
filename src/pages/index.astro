@@ -2,33 +2,36 @@
 import Layout from '../layouts/Layout.astro';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 ---
-<html data-theme="coffee" class="bg-black min-h-screen flex flex-col">
+<html data-theme="coffee" class="bg-black">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
 </head>
 <Layout  title="Taverna Vasilis">
 	<main class="flex-grow">
+
   	<div id="topbar" class="navbar bg-black">
-  <div class="flex-1">
+  <div class="flex-1 hidden sm:block lg:block">
     <a href="https://maps.app.goo.gl/qsJArbKcjbrU26Rt9" class="btn btn-ghost text-xs">
 			<i class="fa-regular fa-map"></i>Gothaer Str.2 99885 Ohrdruf
 		</a>
-		<a href="https://www.instagram.com/a" class="btn btn-ghost text-sm">
+			<a class="btn btn-ghost text-sm" href=""><i class="fa-solid fa-phone"></i>+76543332454</a>
+			<a href="btn btn-ghost text-sm"><i class="fa-regular fa-envelope"></i> booking@restaurant.com</a>
+  </div>
+  <div class="flex-0">
+    <a href="https://www.instagram.com/a" class="btn btn-ghost text-sm">
 			<i class="fa-brands fa-instagram"></i>
 		</a>
 		<a href="https://www.facebook.com/" class="btn btn-ghost text-sm">
 			<i class="fa-brands fa-facebook"></i>
 		</a>
   </div>
-  <div class="flex-0">
-			<a class="btn btn-ghost text-sm" href=""><i class="fa-solid fa-phone"></i>+76543332454</a>
-			<a href="btn btn-ghost text-sm"><i class="fa-regular fa-envelope"></i> booking@restaurant.com</a>
-  </div>
   </div>
 
-<div class="navbar bg-black">
-  <div class="navbar-start">
+  <div class="static navbar bg-black sm:flex-row item-start justify-between space-x-40 px-2 py-2">
+  <div class="flex justify-start items-starts">
+    <img src="/images/logo.jpg" class="w-40">
     <div class="dropdown">
       <label tabindex="0" class="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -41,9 +44,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
       <li><a href="/contact" class="text-xl hover:underline underline-offset-8">Contact</a></li>
       </ul>
     </div>
-    <img src="/images/logo.jpg" class="w-40">
   </div>
-  <div class="navbar-center hidden lg:flex">
+  <div class="items-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
       <li><a href="/" class="text-xl underline underline-offset-8 hover:animate-jump">Home</a></li>
 			<li><a href="/reservation" class="text-xl hover:animate-jump hover:underline underline-offset-8">Reservation</a></li>
@@ -52,13 +54,14 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
       <li><a href="/contact" class="text-xl hover:animate-jump hover:underline underline-offset-8">Contact</a></li>
     </ul>
   </div>
-  <div class="navbar-end">
+  <div class="flex items-end justify-end lg:justify-end sm:justify-end">
     <a href="/reservation" class="btn btn-outline btn-primary text-xl px-10 mx-20 hover:animate-wiggle"> Reservation</a>
   </div>
 </div>
 
-<div class="hero min-h-screen" style="background-image"> <img class="animate-hero animate-delay-1000" src="/images/hero-slider-3.jpg" alt="hero-background">
-  <div class="hero-overlay bg-opacity-60"></div>
+<div class="hero relative sm:max-w-full"> 
+  <img class="w-full h-full object-cover animate-hero animate-delay-1000" style="background-image: ;" src="/images/hero-slider-3.jpg" alt="hero-background">
+  <div class="hero-overlay bg-opacity-60 min-w-full"></div>
   <div class="hero-content text-center text-neutral-content">
     <div class="max-w-screen">
       <h1 class="font-forum tracking-widest text-9xl mb-10">Taverna Vasilis</h1>
@@ -68,8 +71,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
   </div>
 </div>
 
-<div id="services" class="grid grid-cols-3 gap-1 place-content-center mx-10">
-<div class="card w-96 bg-transparent shadow-xl h-max">
+<div id="services" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-4 sm:flex justify-center items-center">
+  <div class="card w-96 bg-transparent shadow-xl h-max">
   <figure class="px-10 pt-10 mt-56">
     <img src="/images/img-pattern.svg" class="h-96 hover:[transform:rotateX(180deg)]">
     <img src="/images/service-1.jpg" alt="Shoes" class="absolute rounded-xl h-80 hover:brightness-125 hover:animate-jump"/>
