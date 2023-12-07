@@ -1,0 +1,8 @@
+---
+const { href, additionalClasses = '' } = Astro.props;
+const baseClasses = "btn btn-ghost btn-sm text-sm";
+const classes = `${baseClasses} ${additionalClasses}`;
+---
+<a {href} class={classes}>
+    <slot />
+</a>

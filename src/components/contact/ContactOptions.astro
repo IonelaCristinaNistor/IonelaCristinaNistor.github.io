@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import phoneSolidSvg from '../../images/phone-solid.svg'
+---
+<div id="contact-options" class="flex justify-center">
+    <div class="grid grid-cols-3 gap-20">
+
+        <div class="card w-60 border border-primary my-20">
+            <figure>
+                <Image src={phoneSolidSvg} alt="Phone Icon" class="mt-10 w-24 h-16 hover:animate-jump"/>
+            </figure>
+            <div class="card-body text-center">
+                <h1 class="card-title flex justify-center text-center text-2xl  tracking-wider font-thin">Give Us A Call</h1>
+                <p class="font-thin ">Lorem Ipsum is simply dummy printing and typesetting.</p>
+            </div>
+        </div>
+
+        <div class="card w-60 bg-stone-800 my-20">
+            <figure><img src="/images/map-regular.svg" class="mt-10 w-24 h-16 hover:animate-jump"/></figure>
+            <div class="card-body text-center">
+                <h1 class="card-title flex justify-center text-center text-2xl  tracking-wider text-white font-thin">Google Maps</h1>
+                <p class="text-white">Lorem Ipsum is simply dummy printing and typesetting.</p>
+            </div>
+        </div>
+
+        <div class="card w-60 bg-stone-800 my-20">
+            <figure><img src="/images/at-solid.svg" class="mt-10 w-24 h-16 hover:animate-jump"/></figure>
+            <div class="card-body text-center">
+                <h1 class="card-title flex justify-center text-center text-2xl  tracking-wider text-white font-thin">Send An Email</h1>
+                <p class="text-white">Lorem Ipsum is simply dummy printing and typesetting.</p>
+            </div>
+        </div>
+
+    </div>
+</div>

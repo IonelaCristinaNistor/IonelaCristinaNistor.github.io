@@ -1,0 +1,60 @@
+<div id="services" class="flex flex-col justify-center items-center mt-20">
+
+    <!-- TODO: Replace all <img /> elements with <Image /> components (check video to see how to import local images) -->
+    <!-- TODO: Implement <slot /> here -->
+    <!-- TODO: Create a ServiceCard.astro component, which will be included directly inside index.astro -->
+    <!-- <ServiceCard title="Breakfast" image="/images/service-1.jpg" /> -->
+    <!-- <ServiceCard title="Appetizers" image="/images/service-2.jpg" /> -->
+    <!-- <ServiceCard title="Drinks" image="/images/service-3.jpg" /> -->
+
+    <div class="flex flex-col items-center justify-center max-w-sm xl:-mb-20">
+        <p class="text-xl font-bold tracking-widest  mb-4">Flavors For Royalty</p>
+        <img src="/images/separator.svg" class="w-28 mb-6" alt="separator">
+        <h2 class="text-4xl xl:text-5xl text-white">We Offer Top Notch</h2>
+        <p class="text-lg text-center mt-4">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys
+            standard dummy text ever.
+        </p>
+    </div>
+
+    <div class="flex flex-col xl:flex-row justify-center items-center gap-8">
+        <div class="card w-96 bg-transparent shadow-xl">
+            <figure class="px-10 pt-10">
+                <img src="/images/img-pattern.svg" class="h-96 hover:[transform:rotateX(180deg)]">
+                <img src="/images/service-1.jpg" alt="Shoes" class="absolute rounded-xl h-80 hover:brightness-125 hover:animate-jump"/>
+            </figure>
+            <div class="card-body items-center text-center">
+                <h2 class="card-title mb-8 text-4xl  font-thin tracking-wide text-orange-100">Breakfast</h2>
+                <div class="card-actions">
+                    <button class="btn btn-outline btn-primary">VIEW MENU</button>
+                </div>
+            </div>
+        </div>
+        <div class="card w-96 bg-transparent shadow-xl xl:-mb-56">
+            <!-- Include a <slot /> element above the <figure> element inside the ServiceCard.astro component -->
+            <!-- This will allow you to include this extra content -->
+            <figure class="px-10 pt-1">
+                <img src="/images/img-pattern.svg" class="h-96 hover:[transform:rotateX(180deg)]">
+                <img src="/images/service-2.jpg" alt="Appetizers" class="absolute rounded-xl h-80 hover:brightness-125 hover:animate-jump" />
+            </figure>
+            <div class="card-body items-center text-center">
+                <h2 class="card-title mb-8 text-4xl  font-thin tracking-wide text-orange-100">Appetizers</h2>
+                <div class="card-actions">
+                    <button class="btn btn-outline btn-primary">VIEW MENU</button>
+                </div>
+            </div>
+        </div>
+        <div class="card w-96 bg-transparent shadow-xl">
+            <figure class="px-10 pt-10">
+                <img src="/images/img-pattern.svg" class="h-96 hover:[transform:rotateX(180deg)]">
+                <img src="/images/service-3.jpg" alt="Drinks" class="absolute rounded-xl h-80 hover:brightness-125 hover:animate-jump" />
+            </figure>
+            <div class="card-body items-center text-center">
+                <h2 class="card-title mb-8 text-4xl  font-thin tracking-wide text-orange-100">Drinks</h2>
+                <div class="card-actions">
+                    <button class="btn btn-outline btn-primary">VIEW MENU</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
