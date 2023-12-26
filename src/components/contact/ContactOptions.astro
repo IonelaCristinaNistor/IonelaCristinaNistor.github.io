@@ -1,41 +1,13 @@
 ---
-import { Image } from 'astro:assets';
+import ContactCard from './ContactCard.astro';
 import phoneSolidSvg from '../../images/phone-solid1.svg';
 import mapRegularSvg from '../../images/mapRegular.svg';
 import atSolidSvg from '../../images/atSolid.svg';
 ---
-<div id="contact-options" class="flex justify-center">
-    <div class="grid grid-cols-3 gap-20">
-
-        <div class="card w-60 border border-primary my-20">
-            <figure>
-                <Image src={phoneSolidSvg} alt="Phone Icon" class="mt-10 w-24 h-16 hover:animate-jump"/>
-            </figure>
-            <div class="card-body text-center">
-                <h1 class="card-title flex justify-center text-center text-2xl tracking-wider font-thin">Give Us A Call</h1>
-                <p class="font-thin ">Lorem Ipsum is simply dummy printing and typesetting.</p>
-            </div>
-        </div>
-
-        <div class="card w-60 border border-primary my-20">
-            <figure>
-                <Image src={mapRegularSvg} alt="Phone Icon" class="mt-10 w-24 h-16 hover:animate-jump"/>
-            </figure>
-            <div class="card-body text-center">
-                <h1 class="card-title flex justify-center text-center text-2xl tracking-wider font-thin">Give Us A Call</h1>
-                <p class="font-thin ">Lorem Ipsum is simply dummy printing and typesetting.</p>
-            </div>
-        </div>
-
-        <div class="card w-60 border border-primary my-20">
-            <figure>
-                <Image src={atSolidSvg} alt="Email Icon" class="mt-10 w-24 h-16 hover:animate-jump"/>
-            </figure>
-            <div class="card-body text-center">
-                <h1 class="card-title flex justify-center text-center text-2xl tracking-wider font-thin">Send An Email</h1>
-                <p class="font-thin">Lorem Ipsum is simply dummy printing and typesetting.</p>
-            </div>
-        </div>
-
+<div id="contact-options" class="flex justify-center my-10">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10">
+        <ContactCard image={phoneSolidSvg} h="Give Us A Call" text="Lorem Ipsum is simply dummy printing and typesetting."/>
+        <ContactCard image={mapRegularSvg} h="Visit Our Place" text="Lorem Ipsum is simply dummy printing and typesetting."/>
+        <ContactCard image={atSolidSvg} h="Send An Email" text="Lorem Ipsum is simply dummy printing and typesetting."/>
     </div>
 </div>

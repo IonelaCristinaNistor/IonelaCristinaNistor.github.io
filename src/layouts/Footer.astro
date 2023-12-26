@@ -7,6 +7,7 @@ import footerFormBackground from "../images/footer-form-bg.png";
 import footerFormPattern from "../images/footer-form-pattern.svg";
 import GoogleMap from "../components/GoogleMap.astro";
 import MenuLink from "../components/MenuLink.astro";
+import VerticalMenu from "../components/VerticalMenu.astro";
 ---
 <GoogleMap />
 
@@ -81,24 +82,25 @@ import MenuLink from "../components/MenuLink.astro";
 
   <!-- TODO: Create VerticalMenu.astro -->
   <nav class="relative pt-20 pl-40 gap-6 justify-items-center text-2xl ">
-    <MenuLink href="/">Home</MenuLink>
-    <MenuLink href="/menu">Menu</MenuLink>
-    <MenuLink href="/gallery">Gallery</MenuLink>
-    <MenuLink href="/contact">Contact</MenuLink>
+    <VerticalMenu href="/">Home</VerticalMenu>
+    <VerticalMenu href="/menu">Menu</VerticalMenu>
+    <VerticalMenu href="/gallery">Gallery</VerticalMenu>
+    <VerticalMenu href="/contact">Contact</VerticalMenu>
   </nav>
 
   <div class="relative">
     <Image src={logoTransparent} alt="Footer Logo Image" class="absolute w-60 top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
 
     <!-- TODO: VerticalMenu.astro -->
-    <div class="absolute flex flex-col justify-self-center place-items-center text-xl  space-y-4 py-80">
-      <a href="">Gothaer Str. 2, 99885 Ohrdruf</a>
-      <a href="">booking@.com</a>
-      <a href="">Booking Request : +88-123-123456</a>
-      <a href="">Open : 09:00 am - 01:00 pm</a>
+    <div class="absolute flex flex-col justify-self-center place-items-center text-xl space-y-4 py-80">
+      <VerticalMenu href="https://maps.app.goo.gl/sECpygX6nF4FQqpf7">Gothaer Str. 2, 99885 Ohrdruf</VerticalMenu>
+      <VerticalMenu href="">booking@.com</VerticalMenu>
+      <VerticalMenu href="">Booking Request : +88-123-123456</VerticalMenu>
+      <span>Open : 09:00 am - 01:00 pm</span>
+
       <span class="mt-12">Copyright © 2023 - Taverna Vasilis</span>
     </div>
-
+    
     <Image src={footerFormBackground} alt="Footer Form Background" class="max-w-none w-full" />
     <Image src={footerFormPattern} alt="Footer Form Pattern" class="absolute h-full justify-self-start" />
     <Image src={footerFormPattern} alt="Footer Form Pattern" class="absolute h-full justify-self-end" />
@@ -106,8 +108,8 @@ import MenuLink from "../components/MenuLink.astro";
 
   <!-- TODO: VerticalMenu.astro -->
   <nav class="relative pt-20 pr-40 gap-6 justify-end justify-items-center text-2xl ">
-    <a class="link link-hover">Facebook</a>
-    <a class="link link-hover">Instagram</a>
-    <a class="link link-hover">Google Maps</a>
+    <VerticalMenu href="https://www.facebook.com/">Facebook</VerticalMenu>
+    <VerticalMenu href="https://www.instagram.com/a/">Instagram</VerticalMenu>
+    <VerticalMenu href="https://maps.app.goo.gl/sECpygX6nF4FQqpf7">Google Maps</VerticalMenu>
   </nav>
 </footer>
