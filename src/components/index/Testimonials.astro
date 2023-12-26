@@ -1,28 +1,5 @@
 <!-- TODO: Replace <img/> with <Image/> -->
 <!-- TODO: Create TestimonialCard component (and make it reusable, add props) -->
 <div id="testimonials" class="flex flex-col md:flex-row gap-12 mx-16 lg:mx-32 xl:mx-48 2xl:mx-56 my-32 justify-items-center items-center">
-    <div class="flex flex-col justify-center items-center border border-base-content rounded-3xl h-auto block-inline text-center">
-        <p class="text-9xl text-center mt-3">”</p>
-        <p class="mx-4 text-justify">
-            Ich wollte mich dafür bedanken, dass du mich letzten Abend zum
-            fantastischen Abendessen eingeladen hast. Das Essen war außergewöhnlich.
-        </p>
-        <img src="/images/testi-avatar.jpg" alt="" class="rounded-full w-28 h-28 my-10">
-    </div>
-    <div class="flex flex-col justify-center items-center border border-base-content rounded-3xl h-auto block-inline text-center">
-        <p class="text-9xl  text-center mt-3">”</p>
-        <p class="mx-2">
-            Ich wollte mich dafür bedanken, dass du mich letzten Abend zum
-            fantastischen Abendessen eingeladen hast. Das Essen war außergewöhnlich.
-        </p>
-        <img src="/images/testi-avatar.jpg" alt="" class="rounded-full w-28 h-28 my-10">
-    </div>
-    <div class="flex flex-col justify-center items-center border border-base-content rounded-3xl h-auto block-inline text-center">
-        <p class="text-9xl  text-center mt-3">”</p>
-        <p class="mx-2">
-            Ich wollte mich dafür bedanken, dass du mich letzten Abend zum
-            fantastischen Abendessen eingeladen hast. Das Essen war außergewöhnlich.
-        </p>
-        <img src="/images/testi-avatar.jpg" alt="" class="rounded-full w-28 h-28 my-10">
-    </div>
+    <slot />
 </div>

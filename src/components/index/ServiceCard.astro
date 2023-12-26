@@ -1,0 +1,19 @@
+---
+import Viewbutton from "./ViewButton.astro"
+import { Image } from "astro:assets";
+const { title, imageCard } = Astro.props;
+import pattern from "../../images/img-pattern.svg"
+---
+<div class="card w-96 bg-transparent shadow-xl">
+    <slot />
+    <figure class="px-10 pt-10">
+        <Image src={ pattern } alt="" class="h-96 hover:[transform:rotateX(180deg)]">
+        <Image src={ imageCard } alt={ title } class="absolute rounded-xl h-80 hover:brightness-125 hover:animate-jump"/>
+    </figure>
+    <div class="card-body items-center text-center">
+        <h2 class="card-title mb-8 text-4xl  font-thin tracking-wide text-orange-100">{ title }</h2>
+        <div class="card-actions">
+            <Viewbutton label="View Menu" />
+        </div>
+    </div>
+</div>

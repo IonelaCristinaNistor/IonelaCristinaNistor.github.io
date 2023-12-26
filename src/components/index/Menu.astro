@@ -1,64 +1,34 @@
 ---
 import { Image } from 'astro:assets';
+import MenuCard from './MenuCard.astro';
 import Menu1 from '../../images/menu-1.png';
+import Menu2 from '../../images/menu-2.png';
+import Menu3 from '../../images/menu-3.png';
+import Menu4 from '../../images/menu-4.png';
+import Menu5 from '../../images/menu-5.png';
+import Menu6 from '../../images/menu-6.png';
+import separatorSvg from '../../images/separator.svg';
 ---
-<!-- TODO: Replace <img/> with <Image/> -->
-<!-- TODO: Create <MenuCard/> component (and make it reusable) -->
+
 <div id="menu" class="flex flex-col justify-center items-center  my-20">
     <div class="flex flex-col items-center justify-center h-max my-10 text-center">
         <p class="text-xl font-bold tracking-widest mb-4">OUR STORY</p>
-        <img src="/images/separator.svg" class="w-28 mb-6" alt="separator">
+        <Image src={separatorSvg} class="w-28 mb-6" alt="separator"/>
         <h2 class="text-5xl text-white">Every Flavor Tells a Story</h2>
     </div>
     <div class="flex flex-col lg:flex-row gap-12 mx-56 w-full lg:w-auto">
         <div class="flex flex-col items-center justify-center gap-12">
-            <div class="flex mx-8 lg:mx-auto">
-                <Image src={Menu1} alt="Greek Salad" class="w-28 h-28 float-left transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"/>
-                <div class="ml-6">
-                    <h1 class="text-xl font-semibold tracking-widest text-orange-200">Greek Salad</h1>
-                    <p class="">Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.</p>
-                </div>
-            </div>
-            <div class="flex mx-8 lg:mx-auto">
-                <img src="/images/menu-2.png" alt="" class="w-28 h-28 float-left transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                <div class="ml-6">
-                    <h1 class="text-xl font-semibold tracking-widest text-orange-200">Lasagne</h1>
-                    <p class="">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.</p>
-                </div>
-            </div>
-            <div class="flex mx-8 lg:mx-auto">
-                <img src="/images/menu-3.png" alt="" class="w-28 h-28 float-left transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                <div class="ml-6">
-                    <h1 class="text-xl font-semibold tracking-widest text-orange-200">Butternut Pumpkin</h1>
-                    <p class="">Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.</p>
-                </div>
-            </div>
+            <MenuCard menuImage = { Menu1 }></MenuCard>
+            <MenuCard menuImage = { Menu2 }></MenuCard>
+            <MenuCard menuImage = { Menu3 }></MenuCard>
         </div>
         <div class="flex flex-col items-center justify-center gap-12">
-            <div class="flex mx-8 lg:mx-auto">
-                <img src="/images/menu-4.png" alt="" class="w-28 h-28 float-left transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                <div class="ml-6">
-                    <h1 class="text-xl font-semibold tracking-widest text-orange-200">Tokusen Wagyu</h1>
-                    <span>Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.</span>
-                </div>
-            </div>
-            <div class="flex mx-8 lg:mx-auto">
-                <img src="/images/menu-5.png" alt="" class="w-28 h-28 float-left transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                <div class="ml-6">
-                    <h1 class="text-xl font-semibold tracking-widest text-orange-200">Olives Rellenas</h1>
-                    <p class="">Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.</p>
-                </div>
-            </div>
-            <div class="flex mx-8 lg:mx-auto">
-                <img src="/images/menu-6.png" alt="" class="w-28 h-28 float-left transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                <div class="ml-6">
-                    <h1 class="text-xl font-semibold tracking-widest text-orange-200">Opu Fish</h1>
-                    <p class="">Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.</p>
-                </div>
-            </div>
+            <MenuCard menuImage = { Menu4 }></MenuCard>
+            <MenuCard menuImage = { Menu5 }></MenuCard>
+            <MenuCard menuImage = { Menu6 }></MenuCard>
         </div>
-    </div>
-
+</div>
+<slot />
     <button class="btn btn-primary btn-wide mt-20">
         View Full Menu
     </button>

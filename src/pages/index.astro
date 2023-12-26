@@ -5,30 +5,56 @@ import Layout from '../layouts/Layout.astro';
 import Hero from "../components/Hero.astro";
 import BookNowButton from "../components/BookNowButton.astro";
 import Services from "../components/index/Services.astro";
+import ServiceCard from "../components/index/ServiceCard.astro"
 import About from "../components/index/About.astro";
 import Menu from "../components/index/Menu.astro";
 import Testimonials from "../components/index/Testimonials.astro";
+import TestimonialCard from '../components/index/TestimonialCard.astro';
+import avatar from '../images/testi-avatar.jpg';
+import about from "../images/about-banner.jpg"
 ---
 <Layout title="Taverna Vasilis">
     <Hero heading="Taverna Vasilis" subheading="Griechische Spezialitäten">
         <BookNowButton />
     </Hero>
 
-    <Services/>
     <!-- TODO: Implement slot in Services.astro -->
     <!--<Services>-->
     <!--    <ServiceCard .../>-->
     <!--    <ServiceCard .../>-->
     <!--    <ServiceCard .../>-->
     <!--</Services>-->
+<Services>
+    <ServiceCard title="Breakfast" imageCard="/images/service-1.jpg"/>
+    <div class="card w-96 bg-transparent shadow-xl xl:-mb-56">
+    <ServiceCard title="Appetizers" imageCard="/images/service-2.jpg" />
+    </div>
+    <ServiceCard title="Drinks" imageCard="/images/service-3.jpg" />
+</Services>
 
     <!-- TODO: Make About.astro component more reusable (create props) -->
     <!-- E.g. <About title="Our Story" description="Lorem Ipsum ..." image="/images/about-banner.jpg" /> -->
-    <About />
+    <About title="Our Story" 
+    description="Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries, but also the leap into." 
+    image={about}/>
+
 
     <!-- TODO: Implement slot in Menu.astro -->
     <Menu />
 
     <!-- TODO: Implement slot in Testimonials.astro -->
-    <Testimonials />
+    <Testimonials>
+        <TestimonialCard image={avatar}>
+            Ich wollte mich dafür bedanken, dass du mich letzten Abend zum
+            fantastischen Abendessen eingeladen hast. Das Essen war außergewöhnlich.
+        </TestimonialCard>
+        <TestimonialCard image={avatar}>
+            Ich wollte mich dafür bedanken, dass du mich letzten Abend zum
+            fantastischen Abendessen eingeladen hast. Das Essen war außergewöhnlich.
+        </TestimonialCard>
+        <TestimonialCard image={avatar}>
+            Ich wollte mich dafür bedanken, dass du mich letzten Abend zum
+            fantastischen Abendessen eingeladen hast. Das Essen war außergewöhnlich.
+        </TestimonialCard>
+    </Testimonials>
 </Layout>

@@ -1,0 +1,11 @@
+---
+import { Image } from "astro:assets";
+const { menuImage } = Astro.props;
+---
+<div class="flex mx-8 lg:mx-auto">
+    <Image src={ menuImage } alt="Greek Salad" class="w-28 h-28 float-left transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"/>
+    <div class="ml-6">
+        <h1 class="text-xl font-semibold tracking-widest text-orange-200">Greek Salad</h1>
+        <p class="">Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.</p>
+    </div>
+</div>
