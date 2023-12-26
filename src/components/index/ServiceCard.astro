@@ -5,7 +5,7 @@ const { title, imageCard } = Astro.props;
 ---
 <div class="card w-96 bg-transparent shadow-xl mb-10">
     <slot />
-    <figure class="px-10 pt-10">
+    <figure class="px-10 pt-10 mb-10">
         <Image src={imageCard} alt={title} class="absolute rounded-xl h-80 hover:brightness-125 hover:animate-jump"/>
     </figure>
     <div class="card-body items-center text-center">
