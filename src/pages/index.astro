@@ -10,8 +10,12 @@ import About from "../components/index/About.astro";
 import Menu from "../components/index/Menu.astro";
 import Testimonials from "../components/index/Testimonials.astro";
 import TestimonialCard from '../components/index/TestimonialCard.astro';
+
 import avatar from '../images/testi-avatar.jpg';
 import about from "../images/about-banner.jpg"
+import service1 from "../images/service-1.jpg"
+import service2 from "../images/service-2.jpg"
+import service3 from "../images/service-3.jpg"
 ---
 <Layout title="Taverna Vasilis">
     <Hero heading="Taverna Vasilis" subheading="Griechische Spezialitäten">
@@ -25,11 +29,11 @@ import about from "../images/about-banner.jpg"
     <!--    <ServiceCard .../>-->
     <!--</Services>-->
 <Services>
-    <ServiceCard title="Breakfast" imageCard="/images/service-1.jpg"/>
+    <ServiceCard title="Breakfast" imageCard={service1}/>
     <div class="card w-96 bg-transparent shadow-xl xl:-mb-56">
-    <ServiceCard title="Appetizers" imageCard="/images/service-2.jpg" />
+    <ServiceCard title="Appetizers" imageCard={service2}/>
     </div>
-    <ServiceCard title="Drinks" imageCard="/images/service-3.jpg" />
+    <ServiceCard title="Drinks" imageCard={service3}/>
 </Services>
 
     <!-- TODO: Make About.astro component more reusable (create props) -->
