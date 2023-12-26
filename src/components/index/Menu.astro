@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import MenuCard from './MenuCard.astro';
+import LinkBtn from '../LinkBtn.astro';
 import Menu1 from '../../images/menu-1.png';
 import Menu2 from '../../images/menu-2.png';
 import Menu3 from '../../images/menu-3.png';
@@ -10,7 +11,7 @@ import Menu6 from '../../images/menu-6.png';
 import separatorSvg from '../../images/separator.svg';
 ---
 
-<div id="menu" class="flex flex-col justify-center items-center  my-20">
+<div id="menu" class="flex flex-col justify-center items-center my-20">
     <div class="flex flex-col items-center justify-center h-max my-10 text-center">
         <p class="text-xl font-bold tracking-widest mb-4">OUR MENU</p>
         <Image src={separatorSvg} class="w-28 mb-6" alt="separator"/>
@@ -18,18 +19,21 @@ import separatorSvg from '../../images/separator.svg';
     </div>
     <div class="flex flex-col lg:flex-row gap-12 mx-56 w-full lg:w-auto">
         <div class="flex flex-col items-center justify-center gap-12">
-            <MenuCard menuImage = { Menu1 }></MenuCard>
-            <MenuCard menuImage = { Menu2 }></MenuCard>
-            <MenuCard menuImage = { Menu3 }></MenuCard>
+            <MenuCard menuImage={Menu1} title="Greek Salad" text="Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese."/>
+            <MenuCard menuImage={Menu2} title="Greek Salad" text="Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese."/>
+            <MenuCard menuImage={Menu3} title="Greek Salad" text="Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese."/>
         </div>
         <div class="flex flex-col items-center justify-center gap-12">
-            <MenuCard menuImage = { Menu4 }></MenuCard>
-            <MenuCard menuImage = { Menu5 }></MenuCard>
-            <MenuCard menuImage = { Menu6 }></MenuCard>
+            <MenuCard menuImage={Menu4} title="Greek Salad" text="Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese."/>
+            <MenuCard menuImage={Menu5} title="Greek Salad" text="Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese."/>
+            <MenuCard menuImage={Menu6} title="Greek Salad" text="Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese."/>
         </div>
 </div>
 <slot />
-    <button class="btn btn-primary btn-wide mt-20">
+<LinkBtn href="/menu">
+    <button class="btn btn-primary btn-wide mt-20 text-lg">
         View Full Menu
     </button>
+</LinkBtn>
+
 </div>
