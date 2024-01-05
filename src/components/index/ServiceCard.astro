@@ -1,15 +1,15 @@
 ---
 import Viewbutton from "./ViewButton.astro"
 import { Image } from "astro:assets";
-const { title, imageCard } = Astro.props;
+const { titleCard, imageCard } = Astro.props;
 ---
 <div class="card w-96 bg-transparent shadow-xl mb-10">
     <slot />
-    <figure class="px-10 pt-10 mb-10">
-        <Image src={imageCard} alt={title} class="absolute rounded-xl h-80 hover:brightness-125 hover:animate-jump"/>
+    <figure class="px-10 pt-10 mb-20">
+        <Image src={imageCard} alt="" class="absolute rounded-xl h-80 hover:brightness-125 hover:animate-jump"/>
     </figure>
     <div class="card-body items-center text-center">
-        <h2 class="card-title mb-8 text-4xl  font-thin tracking-wide text-orange-100">{ title }</h2>
+        <h2 class="card-title relative mt-20 text-4xl font-thin tracking-wide text-primary">{titleCard}</h2>
         <div class="card-actions">
             <Viewbutton label="View Menu" />
         </div>

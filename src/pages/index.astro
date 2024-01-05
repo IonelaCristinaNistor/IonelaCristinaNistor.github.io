@@ -7,7 +7,6 @@ import BookNowButton from "../components/BookNowButton.astro";
 import Services from "../components/index/Services.astro";
 import ServiceCard from "../components/index/ServiceCard.astro"
 import About from "../components/index/About.astro";
-import Menu from "../components/index/Menu.astro";
 import Testimonials from "../components/index/Testimonials.astro";
 import TestimonialCard from '../components/index/TestimonialCard.astro';
 
@@ -29,11 +28,11 @@ import service3 from "../images/service-3.jpg"
     <!--    <ServiceCard .../>-->
     <!--</Services>-->
 <Services>
-    <ServiceCard title="Breakfast" imageCard={service1}/>
-    <div class="card w-96 bg-transparent shadow-xl xl:-mb-56">
-    <ServiceCard title="Appetizers" imageCard={service2}/>
-    </div>
-    <ServiceCard title="Drinks" imageCard={service3}/>
+    <ServiceCard titleCard="Vorspeisen" imageCard={service1}/>
+        <div class="card w-96 bg-transparent shadow-xl xl:-mb-56">
+    <ServiceCard titleCard="Grills" imageCard={service2}/>
+        </div>
+    <ServiceCard titleCard="Kinderteller" imageCard={service3}/>
 </Services>
 
     <!-- TODO: Make About.astro component more reusable (create props) -->
@@ -41,10 +40,6 @@ import service3 from "../images/service-3.jpg"
     <About title="Our Story" 
     description="Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries, but also the leap into." 
     image={about}/>
-
-
-    <!-- TODO: Implement slot in Menu.astro -->
-    <Menu />
 
     <!-- TODO: Implement slot in Testimonials.astro -->
     <Testimonials>
